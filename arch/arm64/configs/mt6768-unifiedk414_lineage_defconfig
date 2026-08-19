@@ -52,6 +52,10 @@ CONFIG_SCHED_BORE=y
 CONFIG_XDP_SOCKETS=y
 # CONFIG_XDP_SOCKETS_DIAG is not set
 
+#dont set enforcing/permissive if you are building kernel from aosp source
+# CONFIG_ALWAYS_ENFORCE is not set
+# CONFIG_ALWAYS_PERMISSIVE is not set
+
 #
 # General setup
 #
@@ -5533,11 +5537,6 @@ CONFIG_SECURITY_SELINUX=y
 # CONFIG_SECURITY_SELINUX_BOOTPARAM is not set
 # CONFIG_SECURITY_SELINUX_DISABLE is not set
 CONFIG_SECURITY_SELINUX_DEVELOP=y
-<<<<<<<< HEAD:arch/arm64/configs/a32_lineage_defconfig
-# CONFIG_ALWAYS_ENFORCE is not set
-# CONFIG_ALWAYS_PERMISSIVE is not set
-========
->>>>>>>> b6a81808ca29 (common: split up configs & add m22 support):arch/arm64/configs/mt6768_slm_defconfig
 CONFIG_SECURITY_SELINUX_AVC_STATS=y
 CONFIG_SECURITY_SELINUX_CHECKREQPROT_VALUE=0
 CONFIG_SECURITY_SELINUX_SIDTAB_HASH_BITS=9
