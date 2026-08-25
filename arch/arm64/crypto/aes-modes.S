@@ -297,7 +297,7 @@ AES_ENTRY(aes_ctr_encrypt)
 	eor		v1.16b, v1.16b, v3.16b
 	st1		{v0.16b-v1.16b}, [x0], #32
 #else
-	ldr		q8, =0x30000000200000001	/* addends 1,2,3[,0] */
+	ldr		q8, .L_q8_const	/* addends 1,2,3[,0] */
 	dup		v7.4s, w8
 	mov		v0.16b, v4.16b
 	add		v7.4s, v7.4s, v8.4s
@@ -552,3 +552,8 @@ AES_ENTRY(aes_mac_update)
 	st1		{v0.16b}, [x4]			/* return dg */
 	ret
 AES_ENDPROC(aes_mac_update)
+
+.align 4
+.L_q8_const:
+    .quad 0x0000000200000001
+    .quad 0x0000000000000003
