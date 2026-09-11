@@ -1,6 +1,13 @@
 Linux kernel
 ============
 
+White Kernel Project is an open project that takes 
+an existing open-source kernel as its base and applies minimal modifications,
+while also adding ReSukiSU support; the kernel is frequently updated, 
+ensuring that ReSukiSU components never become outdated.
+[Download ready-made kernel images packaged in AnyKernel3.](https://github.com/MrGadget84/White-Kernel-Project)
+============
+
 This file was moved to Documentation/admin-guide/README.rst
 
 Please notice that there are several guides for kernel developers and users.
